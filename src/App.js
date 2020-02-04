@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
+import './css/App.css';
+import BoardContainer from './containers/BoardContainer.js'
+import HeaderContainer from './containers/HeaderContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div>
+      <HeaderContainer />
+      <BoardContainer /> 
     </div>
   );
 }

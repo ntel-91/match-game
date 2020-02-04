@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  background-color: blue;
+  display: grid;
+  grid-template-rows: 15% auto;
 }
 
 .App-logo {
