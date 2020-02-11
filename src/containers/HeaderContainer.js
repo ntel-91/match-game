@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 class HeaderContainer extends React.Component {
     
     render() {
         return (
             <h1>
-                HeaderContainer
+                Connect Four
             </h1>
         )
     }

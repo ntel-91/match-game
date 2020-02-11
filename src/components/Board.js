@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Square from './Square.js'
 
 class Board extends React.Component {
@@ -14,7 +14,12 @@ class Board extends React.Component {
 
     renderSquares = () => {
         return this.state.squares.map(square => {
-            return <Square name={square}/>
+            return (
+                <Square 
+                    key={square}
+                    name={square}
+                />
+            )
         })
     }
 
@@ -22,7 +27,6 @@ class Board extends React.Component {
         
         return (
             <div className='board'>
-                {/* {this.renderSquares(this.state.squares)}        */}
                 {this.renderSquares()}
             </div>
         )
