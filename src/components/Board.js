@@ -9,7 +9,8 @@ class Board extends React.Component {
             'Are', 'Shrek', 'Apple', 'Pee', 
             'Russel', 'Blue', 'Bee', 'Shah', 
             'Sea', 'Frozen', 'Taylor', 'Up', 
-        ]
+        ],
+        colorIndex: 0
     }
 
     renderSquares = () => {
@@ -18,15 +19,21 @@ class Board extends React.Component {
                 <Square 
                     key={square}
                     name={square}
+                    selectSquare={this.state.colorIndex}
                 />
             )
         })
     }
 
+    colorIndex = () => {
+        this.setState({
+            colorIndex: this.state.colorIndex + 1
+        })
+    }
+
     render() {
-        
         return (
-            <div className='board'>
+            <div className='board' >
                 {this.renderSquares()}
             </div>
         )
